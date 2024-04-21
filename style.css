@@ -1,0 +1,178 @@
+:root {
+  --purple: #7a4853;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+body {
+  text-align: center;
+}
+img {
+  width: 20vw;
+  height: 50vh;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #eee;
+}
+#quantity {
+  width: 20px;
+  margin-bottom: 10vh;
+}
+table {
+  width: 100%;
+  padding: 20px;
+  background-color: #eee;
+}
+h3 {
+  margin-top: 5rem;
+}
+header {
+  position: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+header .logo {
+  height: 7.5vh;
+  width: 4.5vw;
+}
+header .navbar a {
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+header .navbar a:hover {
+  color: var(--purple);
+}
+header .icons a {
+  font-size: 1.5rem;
+  color: #333;
+  margin-left: 0.5rem;
+}
+header .icons a:hover {
+  color: var(--purple);
+}
+header #toggler {
+  display: none;
+}
+header .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 1rem solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+h2 {
+  margin-top: 6vh;
+}
+footer {
+  height: 30vh;
+  width: 100%;
+  font-size: 0.8rem;
+  background: #7a4853;
+  color: #fff;
+  padding: 2rem;
+  margin-top: 7.5vw;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex-basis: 30%;
+}
+
+footer p,
+footer li {
+  color: #aaa;
+  list-style: none;
+  color: white;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer-section-links ul li a {
+  color: #fff;
+}
+button .back-home {
+  margin-top: 10rem;
+}
+@media (max-width: 450px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .product h3 {
+    font-size: 0.7rem;
+  }
+  img {
+    width: 35vw;
+    height: 25vh;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+  header .logo {
+    height: 8vh;
+    width: 6vw;
+  }
+}
+@media (max-width: 768px) {
+  header .fa-bars {
+    display: block;
+  }
+  header .navbar {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header #toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+  header .logo {
+    height: 8vh;
+    width: 6vw;
+  }
+}
